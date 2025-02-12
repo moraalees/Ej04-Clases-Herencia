@@ -7,5 +7,11 @@ fun main(){
     val texto = MensajeTexto("Tienes que limpiar tu cuarto. - Mamá")
     val notificacion = NotificationPush("You may have to delete your account...")
 
+    notificaciones.add(correo)
+    notificaciones.add(texto)
+    notificaciones.add(notificacion)
 
+    for (mensaje in notificaciones){
+        mensaje.enviarNotificacion()
+    }
 }
